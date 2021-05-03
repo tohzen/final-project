@@ -1,0 +1,1 @@
+hi, i made a cheap copy of angry birds. It is simple, just click and hold the bird, pull and watch the little guides to help you aim. And then? Blast those piggies! Break it all down and have fun, please remember all characters involved in this project, including the graphics belong to Rovio Entertainment Ltd. 

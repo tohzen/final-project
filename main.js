@@ -1,26 +1,49 @@
+window.onload = function() {
+
 const button = document.querySelector(".add-place");
 const addList = document.querySelector(".list-places");
-const spot = document.querySelector(".spot")
+const spots = document.querySelectorAll(".spot")
 
 
 function addPlace(obj) {
     places.push(obj)
-  }
+}
 
-  function remove(index) { 
+function remove(index) { 
     places.splice(index,1)
     
-  }
+}
 
-  function makeSpot() {
+function makeSpot() {
     const inputPlace = document.querySelector(".placesToGo");
     if(inputPlace.value === ""){
-      return alert("Please input text")
+        return alert("Please input text")
     }else{ 
-    const inputPlace = {
-      text: inputPlace.value,
+        console.log('lewl')
+        const inputPlace = {
+            location: inputPlace.value
+        }
+        addPlace(inputPlace)
+        printPlaces(inputPlace)
+        inputPlace.value =""
+        console.log("kek")
     }
-    addPlace(inputPlace)
 }
-  }
-  button.addEventListener("click",makeSpot)
+button.addEventListener("click",makeSpot)
+
+
+const printPlaces = function(obj) {
+    let daCrib = document.createElement("li");
+    daCrib.innerText = obj.text
+    daCrib.classList.add(".spot")
+    daCrib.id = obj.id;
+
+    const addList = document.querySelector(".list-places");
+    addList.appendChild(daCrib)
+    console.log(daCrib)
+    
+    
+}
+
+
+}

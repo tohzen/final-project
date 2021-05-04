@@ -1,3 +1,7 @@
+const button = document.querySelector(".add-place");
+
+
+
 function addPlace(obj) {
     places.push(obj)
   }

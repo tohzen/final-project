@@ -11,3 +11,16 @@ function addPlace(obj) {
     places.splice(index,1)
     
   }
+
+  function makeSpot() {
+    const inputPlace = document.querySelector(".placesToGo");
+    if(inputPlace.value === ""){
+      return alert("Please input text")
+    }else{ 
+    const inputPlace = {
+      text: inputPlace.value,
+    }
+    addPlace(inputPlace)
+}
+  }
+  button.addEventListener("click",makeSpot)

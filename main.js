@@ -1,11 +1,6 @@
-window.onload = function() {
-
-const button = document.querySelector(".add-place");
-const addList = document.querySelector(".list-places");
-const spots = document.querySelectorAll(".spot")
 
 
-function addPlace(obj) {
+function addTravel(obj) {
     places.push(obj)
 }
 
@@ -14,36 +9,84 @@ function remove(index) {
     
 }
 
-function makeSpot() {
-    const inputPlace = document.querySelector(".placesToGo");
-    if(inputPlace.value === ""){
+const button = document.querySelector(".add-travel");
+
+const addList = document.querySelector(".travel-list");
+const item = document.querySelectorAll(".travel-item")
+const newInput = document.querySelector(".travel-input");
+
+
+
+
+function makeItem() {
+    const newInput = document.querySelector(".travel-input");
+    if(newInput.value === ""){
         return alert("Please input text")
     }else{ 
-        console.log('lewl')
-        const inputPlace = {
-            location: inputPlace.value
+        const newItem = {
+            location: newInput.value,
+            travelers: 2
         }
-        addPlace(inputPlace)
-        printPlaces(inputPlace)
-        inputPlace.value =""
-        console.log("kek")
+        
+        addTravel(newItem)
+        printTravel(newItem)
+        newInput.value = ""
+        console.log(places)
     }
 }
-button.addEventListener("click",makeSpot)
+button.addEventListener("click",makeItem);
 
 
-const printPlaces = function(obj) {
-    let daCrib = document.createElement("li");
-    daCrib.innerText = obj.text
-    daCrib.classList.add(".spot")
-    daCrib.id = obj.id;
 
-    const addList = document.querySelector(".list-places");
-    addList.appendChild(daCrib)
-    console.log(daCrib)
+const printTravel = function(obj) {
+    let item = document.createElement("li");
+    item.innerText = obj.location
+    item.classList.add("travel-item")
+    
+    const addList = document.querySelector(".travel-list");
+    addList.appendChild(item)
+    console.log(item)
     
     
 }
 
 
+
+
+console.log("shit")
+
+
+
+
+function readList(travel) {
+    if(travel == undefined){
+        return ""
+    }else{
+        for(travel of places) {
+            printTravel(travel)
+            
+            console.log()
+        }
+        
+    }
+    
+}
+
+
+const clearButton = document.querySelector(".travel-clear")
+function clearAll(thing) {
+    const items = document.querySelectorAll(".travel-item")
+    newInput.value = ""
+    for(thing of items) {
+        thing.remove();
+        places.pop(places)
+    }
+}
+clearButton.addEventListener("click", refresh);
+
+
+function refresh(obj) {
+    clearAll(places);
+    readList(places);
+    console.log(places)
 }

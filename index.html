@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>travel</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
-    <script src="travel.js"></script>
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Lets get travelin</h1>
-            <div class="app">
-                <section>
-                    <label for="placesToGo">Where?</label>
-                    <input class="placesToGo" type="text" name ="input-place" >
-                    <button class="add-place">ADD</button>
-                    <button type="button" class= "clear-places btn btn-danger">clear</button>
-                </section>
-                <ol class="list-places"></ol>
-            </div>
-            <p class="lead"></p>
-        </div>
+    <div class="app">
+        <h1>travel</h1>
+        <section>
+            <label for="travel-input">Add to your travel list!</label>
+            <input class="travel-input" type="text" name="travel-input">
+            <button class="add-travel">ADD</button>
+            <button type="button" class= "travel-clear btn btn-danger">clear</button>
+        </section>
+        <ol class="travel-list"></ol>
     </div>
+    <script src="./travel.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

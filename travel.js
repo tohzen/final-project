@@ -1,5 +1,5 @@
-const places =[
+const places = [
     {
-        location: 'home'
-    }
+    },
+    
 ]

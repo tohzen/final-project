@@ -14,8 +14,7 @@ const button = document.querySelector(".add-travel");
 const addList = document.querySelector(".travel-list");
 const item = document.querySelectorAll(".travel-item")
 const newInput = document.querySelector(".travel-input");
-
-
+const oops = document.querySelector("oops")
 
 
 function makeItem() {

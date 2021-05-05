@@ -50,13 +50,7 @@ const printTravel = function(obj) {
     
 }
 
-
-
-
 console.log("shit")
-
-
-
 
 function readList(travel) {
     if(travel == undefined){

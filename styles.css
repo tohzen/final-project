@@ -1,0 +1,70 @@
+body {
+    background-image:url(assets/papers.co-od09-nature-travel-kit-29-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 98vw;
+    animation: gradient 15s ease infinite;
+    
+}
+
+.travel-box{
+    position: absolute;
+    text-align: center;
+    padding: -15px 0px 3px 10px;
+
+}
+.travel-list {
+    width: 226px;
+    margin-bottom: -.1px;
+    margin-top: -.1px;
+    color: black;
+    padding-top: 15px;
+    background-color: black;
+    
+}
+
+.app {
+    background-color: #25A6FE;
+    text-align: center;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    animation-duration: 10s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+
+  .travel-input {
+      background-color: lightsteelblue;
+      border-radius: 15px;
+      
+  }
+  button {
+    background-color: lightsteelblue;
+    border-radius: 15px;
+  }

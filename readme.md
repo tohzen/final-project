@@ -1,1 +1,1 @@
-here we will have a simple travel planner to help us around the universe
+Ive created a glorified list, one to keep track of the places you wish to visit one day!
